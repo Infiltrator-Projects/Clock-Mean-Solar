@@ -49,5 +49,5 @@ Each package owns only this provider and its passive documentation. Its `Replace
 ## Two installed files
 
 Only the compiled clock .so under /System/Resources/Clocks/ and its illustrated
-PDF under /System/Resources/Documentation/Clock-Mean-Solar/ are installed.
+PDF under /System/Resources/Documentation/Clock-Mean-Solar.pdf are installed.
 Engineering reports stay in GitHub; native verification stays in dpkg.
