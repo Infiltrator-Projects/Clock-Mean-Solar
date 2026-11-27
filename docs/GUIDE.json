@@ -5,7 +5,7 @@
   "example": "At 12:00 UTC, longitude 15 degrees east gives 13:00 LMT, while longitude 30 degrees west gives 10:00 LMT. Longitude zero gives 12:00 LMT. A time-zone or daylight-saving change does not change these results.",
   "history": "Before widespread adoption of standard time zones, towns often used local mean time. The offset depended on their meridian rather than a national time standard.",
   "model": "The provider adds longitude × 240 seconds to the positive UTC day phase, wraps the result modulo 86400 seconds and floors to the displayed whole second or minute. The following visible boundary is scheduled with upward millisecond rounding. The longitude input must be finite and within the valid geographic range.",
-  "limits": "This is a UTC-based mean solar approximation, not a reconstruction of UT1, historical observatory corrections or apparent sundial time. The arithmetic uses longitude, not latitude; a compatible consumer must supply valid location metadata rather than silently defaulting to Greenwich. UTC is the rotation-time surrogate; DUT1 and site-specific clock practice are not supplied by the provider interface.",
+  "limits": "This is a mean solar approximation using UTC as a surrogate for Earth rotation time; the interface supplies neither DUT1 nor historical observatory corrections. It is not apparent sundial time. Longitude, not latitude, determines the result; a compatible consumer must supply valid location metadata rather than silently defaulting to Greenwich.",
   "sources": [
     "Implementation: https://github.com/Infiltrator-Projects/Clock-Mean-Solar/blob/main/src/provider.c",
     "Model evidence: https://github.com/Infiltrator-Projects/Clock-Mean-Solar/blob/main/docs/MODEL.md",
